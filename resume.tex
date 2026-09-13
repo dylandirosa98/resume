@@ -1,0 +1,138 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}, itemsep=4pt, parsep=0pt, topsep=0pt, partopsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=2pt, parsep=0pt, topsep=2pt, partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Dylan DiRosa} \\ \vspace{1pt}
+    \small 856-305-7016 $|$ \href{mailto:dylandirosa980@gmail.com}{\underline{dylandirosa980@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/dylan-dirosa-5b6607338/}{\underline{linkedin.com/in/dylan-dirosa}} $|$
+    \href{https://github.com/dylandirosa98}{\underline{github.com/dylandirosa98}} \\ \vspace{2pt}
+    \small Blackwood, NJ $|$ U.S. Citizen
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Camden County College}{Blackwood, NJ}
+      {Associate of Science in Computer Science}{2025 -- June 2027}
+      \resumeItemListStart
+        \resumeItem{Coursework: C++, Computer Science I, Discrete Mathematics, Computer Organization}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Software Developer}{Feb. 2026 -- Present}
+      {PuckPro Media}{Blackwood, NJ (Remote)}
+      \resumeItemListStart
+        \resumeItem{Built and run production software for a hockey media business, including CRM, scheduling, and player recruiting tools}
+        \resumeItem{Designed a self-hosted CRM agent (Hermes, Discord, BlueBubbles) that tracks leads, auto-follows up over text, and flags calls with notes}
+        \resumeItem{Shipped a Django scheduling dashboard for videographers that integrates with the CRM for booking and job status}
+        \resumeItem{Built a Next.js recruiting-portfolio platform so staff can generate shareable player sites from an admin dashboard}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Spartan Roof Inspection} $|$ \emph{Go, Wails, SQLite, ONNX} $|$ \href{https://github.com/dylandirosa98/roof-inspection-desktop-app}{\underline{GitHub}}}{2026}
+          \resumeItemListStart
+            \resumeItem{Built an offline desktop app that runs local hail-damage detection on roof photos and generates claim PDF reports}
+            \resumeItem{Wrote the Go backend: ONNX inference, letterbox preprocessing, NMS, SQLite/sqlc persistence, and PDF pagination}
+            \resumeItem{Shipped Windows installer with bundled model/runtime; added tests for coordinate mapping, NMS, and project deletion}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{ESP32 Dog Button} $|$ \emph{C++, ESP32, Python} $|$ \href{https://github.com/dylandirosa98/dog-button-python-server}{\underline{GitHub}}}{2026}
+          \resumeItemListStart
+            \resumeItem{Wrote Arduino C++ on an ESP32 that reads a GPIO button, debounces with a cooldown, and POSTs over WiFi}
+            \resumeItem{Built a small Python server to log presses and send a notification}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{REI Sign} $|$ \emph{Next.js, TypeScript, PostgreSQL, Stripe} $|$ \href{https://github.com/dylandirosa98/reisign}{\underline{GitHub}}}{2026}
+          \resumeItemListStart
+            \resumeItem{Built a multi-tenant contract and e-signature app with auth, webhooks, billing, and PDF generation}
+            \resumeItem{Fixed production bugs including Safari cookie auth failures and duplicate-send race conditions}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt, parsep=0pt, topsep=0pt, partopsep=0pt]
+    \small{\item{
+     \textbf{Languages}{: C++, Go, Python, SQL, TypeScript, JavaScript} \\
+     \textbf{Frameworks}{: Django, Next.js, React, Wails} \\
+     \textbf{Developer Tools}{: Git, Linux, GDB, NixOS, Neovim, SQLite, PostgreSQL, ONNX Runtime}
+    }}
+  \end{itemize}
+
+\end{document}
